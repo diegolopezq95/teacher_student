@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+  <h2>All My Peers</h2>
+  <thead class="thead-inverse">
+  </thead>
+  <tbody>
+    <tr>
+    <td id="listall">
+      My Peers: 
+    </td>
+    <td id="listall">
+      Peer ID: 
+    </td>
+    <td id="listall">
+      Contact Peer: 
+    </td>
+    {% for takens in taken_courses %}
+      <tr>
+        <td id="list">
+            Username:
+            {{ takens.student }}
+        </td>
+        <td id="list">
+          ID:
+          {{ takens.student_id }}
+      </td>
+      <td id="list">
+        Email:
+          {{ takens.student.user.email }}
+      </td>
+      </tr>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

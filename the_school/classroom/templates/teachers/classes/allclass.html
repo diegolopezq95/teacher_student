@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>All Classes</h2>
+<table class="table">
+  <thead class="thead-inverse">
+  </thead>
+  <tbody>
+    <td id="listall">
+      Student:
+    </td>
+    <td id="listall">
+      Student ID:
+    </td>
+    {% for takens in taken_courses %}
+      <tr>
+        <td id="list">
+          Username:
+            {{ takens.student }}
+        </td>
+        <td id="list">
+          ID:
+          {{ takens.student_id }}
+      </td>
+        <td>
+          <small class="text-muted d-block"><a href="{% url 'update_grade' takens.course takens.student_id %}"  class="btn btn-primary">Change student grade</a></small>
+      </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

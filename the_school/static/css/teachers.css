@@ -1,0 +1,28 @@
+body {
+    background-color:#c2d4d8;
+  }
+
+.card {
+    border-radius: 10px;
+}
+
+.card-body {
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+#Courses {
+  color: #524c79;
+}
+
+#list {
+  color: #1c144e;
+  font-size: x-large;
+  font-style: oblique;
+}
+
+#listall {
+  color: #50449e;
+  font-size: x-large;
+  font-style: oblique;
+}

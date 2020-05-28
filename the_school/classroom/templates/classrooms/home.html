@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Welcome to the School Grades! <span class="icon-emo-happy"></span></h2>
+  <p class="lead">
+    If you already have an account, go ahead and <a id="logs" href="{% url 'login' %}">Log in</a>. If you are new, get startedby creating a <a id="stu" href="{% url 'student_signup' %}">Student account</a> or a <a id="tea" href="{% url 'teacher_signup' %}">Teacher account</a>.
+  </p>
+{% endblock %}

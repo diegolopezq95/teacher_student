@@ -1,0 +1,33 @@
+<h2 id="Courses">My Assigned Courses</h2>
+<table class="table">
+  <thead class="thead-inverse">
+  </thead>
+  <tbody>
+    <tr>
+      <h3>Username: {{ user }}</h2>
+    </div>
+    <tr>
+      <td id="listall">
+        Assigned Courses:
+      </td>
+      <td id="listall">
+        Course ID:
+      </td>
+      {% for course in courses %}
+      <tr>
+        <td id="list">
+          {{ course.course_name }}
+        </td>
+        <td id="list">
+            ID:
+          {{ course.id }}
+        </td>
+        <td id="list">
+          <small class="text-muted d-block"><a href="{% url 'new_class' course.course_name %}" class="btn btn-primary">{{course.course_name}}
+              Students</a></small>
+        </td>
+      </tr>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>

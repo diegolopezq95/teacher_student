@@ -1,0 +1,34 @@
+<h2 id="Courses">My Assigned Courses</h2>
+<h3>Username: {{ user }}</h3>
+<table class="table">
+  <thead class="thead-inverse">
+  </thead>
+  <tbody>
+    <tr>
+    <tr>
+      <tr>
+        <td id="listall">
+          My Courses: 
+        </td>
+        <td id="listall">
+          My Final Grade: 
+        </td>
+        {% for takens in taken_courses %}
+        <tr>
+          <td id="list">
+            {{takens.course}}
+          </td>
+          <td id="list">
+            Grade:
+            {{takens.grade}}
+          </td>
+          <td>
+            <small class="text-muted d-block"><a href="{% url 'all_class' takens.course %}" class="btn btn-primary">{{takens.course}} Peers</a></small>
+          </td>
+        </tr>
+        
+        {% endfor %}
+      </tr>
+    </tr>
+  </tbody>
+</table>

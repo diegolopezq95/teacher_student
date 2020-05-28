@@ -1,0 +1,23 @@
+body {
+    background-color: #e9e2ff;
+  }
+a {
+    color: black;
+}
+
+#logs, #stu, #tea {
+    color: rgb(62, 36, 187);
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-body {
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+.card-footer {
+    background-color: rgb(201, 224, 238);
+}

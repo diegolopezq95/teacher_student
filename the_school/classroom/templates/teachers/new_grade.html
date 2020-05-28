@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Course Student</h2>
+<table class="table">
+  <thead class="thead-inverse">
+  </thead>
+  <tbody>
+    <tr>
+    <tr>
+      <td id="listall">
+        Student:
+      </td>
+      <td id="listall">
+        Student ID:
+      </td>
+      <td id="listall">
+        Class ID:
+      </td>
+      <td id="listall">
+        Final Grade:
+      </td>
+      <tr>
+        {% for takens in taken_course %}
+        <td id="list">
+            {{takens.student}}
+        </td>
+        <td id="list">
+          ID:
+          {{takens.student_id}}
+      </td>
+      <td id="list">
+        ID:
+        {{takens.course_id}}
+    </td>
+      <td id="list">
+        Grade:
+        {{takens.grade}}
+    </td>
+        {% endfor %}
+        <td id="list">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_subject">New Grade: </label>
+                <!-- <input type="text" class="form-control" name="grade"> -->
+                <select class="form-control" name="gradess">
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="F">F</option>
+                </select>
+                <button type="submit" class="btn btn-success">Post</button>
+            </div>
+        </form>
+         </td>
+      </tr>
+    </tr>
+  </tbody>
+</table>
+  
+{% endblock %}
